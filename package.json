@@ -1,22 +1,43 @@
 {
-  "name": "sdk",
-  "private": true,
-  "workspaces": [
-    "packages/*"
+  "name": "@champagneswap/core-sdk",
+  "version": "1.0.0-canary.101",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
   ],
+  "module": "dist/core-sdk.esm.js",
+  "repository": {
+    "url": "champagneswap/core-sdk",
+    "directory": "packages/core-sdk"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
-    "test": "yarn workspaces foreach run test",
-    "build": "yarn workspaces foreach run build",
-    "watch": "yarn workspaces foreach run watch"
+    "lint": "tsdx lint src test",
+    "build": "tsdx build",
+    "watch": "tsdx watch",
+    "test": "tsdx test --passWithNoTests",
+    "prepublishOnly": "npx tsdx build"
+  },
+  "dependencies": {
+    "@ethersproject/address": "^5.4.0",
+    "@ethersproject/bignumber": "^5.4.0",
+    "@ethersproject/providers": "^5.4.0",
+    "@ethersproject/solidity": "^5.4.0",
+    "big.js": "^6.1.1",
+    "decimal.js-light": "^2.5.0",
+    "jsbi": "^4.1.0",
+    "tiny-invariant": "^1.1.0",
+    "tiny-warning": "^1.0.0",
+    "toformat": "^2.0.0"
   },
   "devDependencies": {
-    "@sushiswap/prettier-config": "^0.1.0",
-    "@types/node": "^16.9.1",
-    "lerna": "^4.0.0",
-    "prettier": "^2.4.0"
+    "@types/big.js": "^6.1.0",
+    "tsdx": "^0.14.1"
   },
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "packageManager": "yarn@3.1.1"
+  "gitHead": "85e582751bfef48da544fbb9810bd6abbd70acac"
 }
