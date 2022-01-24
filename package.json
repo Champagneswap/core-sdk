@@ -1,6 +1,6 @@
 {
   "name": "@champagneswap/core-sdk",
-  "version": "1.0.0-canary.101",
+  "version": "1.0.0-canary.111",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "module": "dist/core-sdk.esm.js",
   "repository": {
-    "url": "champagneswap/core-sdk",
+    "url": "champagneswap/sdk",
     "directory": "packages/core-sdk"
   },
   "publishConfig": {
