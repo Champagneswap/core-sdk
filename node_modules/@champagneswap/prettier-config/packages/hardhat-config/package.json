@@ -1,0 +1,32 @@
+{
+  "name": "@champagneswap/hardhat-config",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "homepage": "https://champagneswap.com",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/champagneswap/config.git",
+    "directory": "packages/hardhat-config"
+  },
+  "scripts": {
+    "build": "tsc",
+    "generate": "ts-node ./internal/generate.ts"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4",
+    "@types/mocha": "8.x",
+    "@types/node-fetch": "^2",
+    "hardhat": "2.x",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.1",
+    "typescript": "4.x"
+  },
+  "peerDependencies": {
+    "hardhat": "2.x"
+  }
+}

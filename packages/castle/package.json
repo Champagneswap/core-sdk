@@ -1,0 +1,37 @@
+{
+  "name": "@champagneswap/castle",
+  "version": "1.0.0-canary.46",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "module": "dist/castle.esm.js",
+  "repository": {
+    "url": "champagneswap/sdk",
+    "directory": "packages/castle"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "lint": "tsdx lint src test",
+    "build": "tsdx build",
+    "watch": "tsdx watch",
+    "test": "tsdx test",
+    "clear_jest_cache": "tsdx test --clearCache --passWithNoTests",
+    "prepublishOnly": "npx tsdx build"
+  },
+  "dependencies": {
+    "@champagneswap/core-sdk": "1.0.0-canary.111",
+    "@ethersproject/bignumber": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/seedrandom": "^3.0.1",
+    "seedrandom": "^3.0.5",
+    "tsdx": "^0.14.1"
+  },
+  "gitHead": "d799f532f41519b7a382782afc3d2a3d1360a431"
+}
